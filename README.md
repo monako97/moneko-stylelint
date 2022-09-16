@@ -1,2 +1,2 @@
-# moneko-stylelint
+# stylelint-config-moneko
 stylelint
