@@ -2,6 +2,8 @@ module.exports = {
   extends: ["stylelint-config-standard", "stylelint-config-prettier"],
   plugins: ["stylelint-order"],
   rules: {
+    "no-empty-source": null,
+    "no-missing-end-of-source-newline": null,
     "declaration-block-single-line-max-declarations": null,
     "alpha-value-notation": null,
     "color-function-notation": null,
@@ -22,6 +24,7 @@ module.exports = {
       "ms",
       "ex",
       "ch",
+      "fr",
     ],
     "order/order": [
       "custom-properties",
@@ -67,6 +70,5 @@ module.exports = {
       },
     ],
   },
-  customSyntax: "postcss-less",
-  ignoreFiles: ["src/styles/var.less"],
+  ignoreFiles: [],
 };
