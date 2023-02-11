@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-moneko",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "stylelint",
   "main": "index.js",
   "bundleDependencies": false,

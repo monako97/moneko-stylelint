@@ -155,7 +155,7 @@ module.exports = {
   customSyntax: 'postcss-less',
   overrides: [
     {
-      files: ['**/*.ts', '**/*.tsx'],
+      files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
       customSyntax: 'postcss-jsx',
       rules: {
         'no-empty-source': null,
