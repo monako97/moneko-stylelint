@@ -143,7 +143,6 @@ module.exports = {
         ],
       },
     ],
-    'block-closing-brace-empty-line-before': true,
     'selector-pseudo-class-no-unknown': [
       true,
       {
