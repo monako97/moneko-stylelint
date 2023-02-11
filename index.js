@@ -143,6 +143,7 @@ module.exports = {
         ],
       },
     ],
+    'block-closing-brace-empty-line-before': true,
     'selector-pseudo-class-no-unknown': [
       true,
       {
@@ -151,7 +152,16 @@ module.exports = {
       },
     ],
   },
-  // customSyntax: "postcss-styled-syntax",
   customSyntax: 'postcss-less',
+  overrides: [
+    {
+      files: ['**/*.ts', '**/*.tsx'],
+      customSyntax: 'postcss-jsx',
+      rules: {
+        'no-empty-source': null,
+        'declaration-property-value-no-unknown': null
+      }
+    },
+  ],
   ignoreFiles: ['node_modules/**/*', 'es/**/*', 'lib/**/*', 'docs/**/*'],
 };
