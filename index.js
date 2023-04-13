@@ -1,7 +1,13 @@
 module.exports = {
   extends: ['stylelint-config-standard'],
-  plugins: ['stylelint-order'],
+  plugins: ['stylelint-order', 'stylelint-plugin-logical-css'],
   rules: {
+    // logical css
+    'plugin/use-logical-properties-and-values': [
+      true,
+      { severity: 'warning' }
+    ],
+    'plugin/use-logical-units': [true, { severity: 'warning' }],
     'declaration-property-value-no-unknown': true,
     'no-descending-specificity': [
       true,
@@ -154,8 +160,8 @@ module.exports = {
   customSyntax: 'postcss-less',
   overrides: [
     {
-      files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
-      customSyntax: 'postcss-jsx',
+      files: ['**/style.ts', '**/style.js', '**/*.tsx', '**/*.jsx'],
+      customSyntax: 'postcss-js',
       rules: {
         'no-empty-source': null,
         'declaration-property-value-no-unknown': null
