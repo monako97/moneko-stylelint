@@ -3,7 +3,10 @@ module.exports = {
   plugins: ['stylelint-order', 'stylelint-plugin-logical-css'],
   rules: {
     // logical css
-    'plugin/use-logical-properties-and-values': [true, { severity: 'warning' }],
+    'plugin/use-logical-properties-and-values': [
+      true,
+      { severity: 'warning', ignore: ['overflow-y', 'overflow-x'] },
+    ],
     'plugin/use-logical-units': [true, { severity: 'warning' }],
     'declaration-property-value-no-unknown': true,
     'no-descending-specificity': [
