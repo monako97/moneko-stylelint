@@ -180,7 +180,7 @@ module.exports = {
   customSyntax: 'postcss-less',
   overrides: [
     {
-      files: ['**/style.ts', '**/style.js', '**/*.tsx', '**/*.jsx'],
+      files: ['**/*.ts', '**/*.js', '**/*.tsx', '**/*.jsx'],
       customSyntax: 'postcss-jsx',
       rules: {
         'no-empty-source': null,
