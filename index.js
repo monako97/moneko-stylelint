@@ -3,15 +3,14 @@ module.exports = {
   plugins: ['stylelint-order', 'stylelint-plugin-logical-css'],
   rules: {
     // logical css
-    'plugin/use-logical-properties-and-values': [
-      true,
-      { severity: 'warning' }
-    ],
+    'plugin/use-logical-properties-and-values': [true, { severity: 'warning' }],
     'plugin/use-logical-units': [true, { severity: 'warning' }],
     'declaration-property-value-no-unknown': true,
     'no-descending-specificity': [
       true,
-      { message: '禁止在具有较高优先级的选择器后出现被其覆盖的较低优先级的选择器' },
+      {
+        message: '禁止在具有较高优先级的选择器后出现被其覆盖的较低优先级的选择器',
+      },
     ],
     'no-empty-source': [true, { message: '禁止空源码' }],
     'block-no-empty': [true, { message: '禁止空块' }],
@@ -23,7 +22,28 @@ module.exports = {
         message: '禁止未知的类型选择器',
       },
     ],
-    'unit-allowed-list': ['vw', 'vh', 'px', '%', 'em', 'rem', 's', 'deg', 'ms', 'ex', 'ch', 'fr'],
+    'unit-allowed-list': [
+      'vw',
+      'vh',
+      'px',
+      '%',
+      'em',
+      'rem',
+      's',
+      'deg',
+      'ms',
+      'ex',
+      'ch',
+      'fr',
+      'dvb',
+      'dvi',
+      'lvb',
+      'lvi',
+      'svb',
+      'svi',
+      'vb',
+      'vi',
+    ],
     'order/order': ['custom-properties', 'declarations', 'dollar-variables', 'rules', 'at-rules'],
     'comment-no-empty': [true, { message: '禁止空注释' }],
     'shorthand-property-no-redundant-values': [true, { message: '禁止简写属性的冗余值' }],
@@ -161,11 +181,11 @@ module.exports = {
   overrides: [
     {
       files: ['**/style.ts', '**/style.js', '**/*.tsx', '**/*.jsx'],
-      customSyntax: 'postcss-js',
+      customSyntax: 'postcss-jsx',
       rules: {
         'no-empty-source': null,
-        'declaration-property-value-no-unknown': null
-      }
+        'declaration-property-value-no-unknown': null,
+      },
     },
   ],
   ignoreFiles: ['node_modules/**/*', 'es/**/*', 'lib/**/*', 'docs/**/*'],

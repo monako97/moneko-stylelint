@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-moneko",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "stylelint",
   "main": "index.js",
   "bundleDependencies": false,
@@ -10,7 +10,7 @@
   "author": "moneko",
   "license": "MIT",
   "dependencies": {
-    "postcss-js": "4.0.1",
+    "postcss-jsx": "0.36.4",
     "postcss-less": "6.0.0",
     "postcss-syntax": "0.36.2",
     "stylelint": "15.4.0",
