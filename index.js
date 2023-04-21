@@ -183,8 +183,15 @@ module.exports = {
   customSyntax: 'postcss-less',
   overrides: [
     {
-      files: ['**/*.ts', '**/*.js', '**/*.tsx', '**/*.jsx'],
-      customSyntax: 'postcss-jsx',
+      files: [
+        '**/*.js',
+        '**/*.cjs',
+        '**/*.mjs',
+        '**/*.jsx',
+        '**/*.ts',
+        '**/*.tsx'
+      ],
+      customSyntax: 'postcss-styled-syntax',
       rules: {
         'no-empty-source': null,
         'declaration-property-value-no-unknown': null,

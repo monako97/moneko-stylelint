@@ -10,7 +10,7 @@
   "author": "moneko",
   "license": "MIT",
   "dependencies": {
-    "postcss-jsx": "0.36.4",
+    "postcss-styled-syntax": "0.4.0",
     "postcss-less": "6.0.0",
     "postcss-syntax": "0.36.2",
     "stylelint": "15.4.0",
