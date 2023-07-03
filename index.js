@@ -17,11 +17,11 @@ module.exports = {
     ],
     'no-empty-source': [true, { message: '禁止空源码' }],
     'block-no-empty': [true, { message: '禁止空块' }],
-    // 兼容自定义标签名
     'selector-type-no-unknown': [
       true,
       {
-        ignoreTypes: [],
+        // custom-element
+        ignoreTypes: ['/^[a-zA-Z]([a-zA-Z0-9]*-[a-zA-Z0-9]+)+/'],
         message: '禁止未知的类型选择器',
       },
     ],
