@@ -176,7 +176,7 @@ module.exports = {
       true,
       {
         message: '禁止未知的伪类选择器',
-        ignorePseudoClasses: ['global', 'local', 'export'],
+        ignorePseudoClasses: ['global', 'local', 'export', 'slotted'],
       },
     ],
   },
