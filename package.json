@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-moneko",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "stylelint",
   "main": "stylelint.config.mjs",
   "bundleDependencies": false,
@@ -11,14 +11,14 @@
   "author": "moneko",
   "license": "MIT",
   "dependencies": {
-    "postcss-styled-syntax": "0.5.0",
+    "postcss-styled-syntax": "0.6.4",
     "postcss-syntax": "0.36.2",
-    "stylelint": "16.0.2",
-    "stylelint-config-standard": "35.0.0",
+    "stylelint": "16.1.0",
+    "stylelint-config-standard": "36.0.0",
     "stylelint-config-standard-less": "3.0.1",
-    "stylelint-config-standard-scss": "12.0.0",
+    "stylelint-config-standard-scss": "13.0.0",
     "stylelint-order": "6.0.4",
-    "stylelint-plugin-logical-css": "0.13.2",
+    "stylelint-plugin-logical-css": "1.0.0",
     "stylelint-webpack-plugin": "4.1.1"
   },
   "files": [
