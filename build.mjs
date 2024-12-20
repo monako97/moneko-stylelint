@@ -5,7 +5,7 @@ const compiler = webpack({
   devtool: false,
   mode: "production",
   entry: {
-    stylelint: './src/stylelint.mjs',
+    config: './src/config.mjs',
     index: './src/index.mjs'
   },
   cache: true,
@@ -13,7 +13,7 @@ const compiler = webpack({
     clean: true,
     path: resolve(process.cwd(), "./lib"),
     filename: (pathData) => {
-      if (pathData.chunk.name === 'stylelint' || pathData.chunk.name === 'index') {
+      if (pathData.chunk.name === 'config' || pathData.chunk.name === 'index') {
         return '[name].cjs';
       }
       return 'common/[name].cjs';
