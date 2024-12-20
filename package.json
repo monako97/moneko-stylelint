@@ -1,10 +1,12 @@
 {
   "name": "stylelint-config-moneko",
-  "version": "3.0.0-beta.0",
+  "version": "3.0.0-beta.1",
   "description": "stylelint",
   "main": "lib",
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "build": "node ./build.mjs"
+  },
   "keywords": [],
   "author": "moneko",
   "license": "MIT",
