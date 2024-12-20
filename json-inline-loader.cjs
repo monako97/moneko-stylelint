@@ -1,11 +1,10 @@
-const fs = require("fs");
 const path = require("path");
 
 module.exports = function (source) {
   // 如果 source 中包含 .json 文件
   if (source.includes("require") && source.includes(".json")) {
     return source.replace(
-      /require(?:\$?\d*)\(['"]([^'"]+\.json)['"]\)/g,
+      /require(?:\$?\d*)\(['"]([^'"]+\.(json|js))['"]\)/g,
       (match, jsonPath) => {
         let absPath;
 
@@ -17,9 +16,7 @@ module.exports = function (source) {
         }
 
         try {
-          // 同步读取 JSON 文件内容
-          const jsonContent = fs.readFileSync(absPath, "utf8");
-          return JSON.stringify(JSON.parse(jsonContent));
+          return JSON.stringify(require(absPath));
         } catch (error) {
           // 如果读取文件失败，抛出错误
           this.emitError(
@@ -30,7 +27,7 @@ module.exports = function (source) {
           return match; // 保留原始 require 语句
         }
       }
-    );
+    ).replace(/const require\s*=\s*createRequire\(import\.meta\.url\);\s*/g, '');
   }
 
   // 如果不包含 .json 文件，返回原始 source
