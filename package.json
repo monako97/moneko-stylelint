@@ -1,8 +1,8 @@
 {
   "name": "stylelint-config-moneko",
-  "version": "3.0.0-beta.2",
+  "version": "3.0.0-beta.3",
   "description": "stylelint",
-  "main": "lib/config/index.cjs",
+  "main": "lib/index.cjs",
   "type": "module",
   "scripts": {
     "build": "node ./build.mjs"

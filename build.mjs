@@ -4,17 +4,26 @@ import webpack from "webpack";
 const compiler = webpack({
   devtool: false,
   mode: "production",
-  entry: "./src/index.mjs",
+  entry: {
+    stylelint: './src/stylelint.mjs',
+    index: './src/index.mjs'
+  },
   cache: true,
   output: {
-    clean: {
-      dry: true,
+    clean: true,
+    path: resolve(process.cwd(), "./lib"),
+    filename: (pathData) => {
+      if (pathData.chunk.name === 'stylelint' || pathData.chunk.name === 'index') {
+        return '[name].cjs';
+      }
+      return 'common/[name].cjs';
     },
-    path: resolve(process.cwd(), "./lib/config"),
-    filename: "index.cjs",
+    chunkFilename: 'common/[name].cjs',
     library: {
-      type: "umd2",
+      type: 'umd2',
+      export: 'default'
     },
+    globalObject: 'this'
   },
   target: "node",
   resolve: {
@@ -47,6 +56,10 @@ const compiler = webpack({
   },
   optimization: {
     minimize: true,
+    splitChunks: {
+      chunks: 'all',
+    },
+    concatenateModules: true,
   },
 });
 

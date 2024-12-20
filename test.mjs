@@ -1,8 +1,9 @@
-import util from "./lib/config/index.cjs";
+import stylelint from "./lib/stylelint.cjs";
+import config from "./lib/index.cjs";
 
-util.stylelint
+stylelint
   .lint({
-    config: util.config,
+    config: config,
     files: "__tests__/*.{css,less,scss}",
     formatter: "string",
   })
