@@ -6,14 +6,14 @@ const compiler = webpack({
   mode: "production",
   entry: {
     config: './src/config.mjs',
-    index: './src/index.mjs'
+    stylelint: './src/stylelint.mjs'
   },
   cache: true,
   output: {
     clean: true,
     path: resolve(process.cwd(), "./lib"),
     filename: (pathData) => {
-      if (pathData.chunk.name === 'config' || pathData.chunk.name === 'index') {
+      if (pathData.chunk.name === 'config' || pathData.chunk.name === 'stylelint') {
         return '[name].cjs';
       }
       return 'common/[name].cjs';

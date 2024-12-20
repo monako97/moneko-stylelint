@@ -1,5 +1,5 @@
 import config from "./lib/config.cjs";
-import stylelint from "./lib/index.cjs";
+import stylelint from "./lib/stylelint.cjs";
 
 stylelint.lint({
   config,
