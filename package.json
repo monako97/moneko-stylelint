@@ -1,26 +1,27 @@
 {
   "name": "stylelint-config-moneko",
-  "version": "3.0.0-beta.5",
+  "version": "2.5.0",
   "description": "stylelint",
-  "main": "lib/config.cjs",
+  "main": "stylelint.config.mjs",
+  "bundleDependencies": false,
+  "deprecated": false,
   "type": "module",
-  "scripts": {
-    "build": "node ./build.mjs"
-  },
+  "scripts": {},
   "keywords": [],
   "author": "moneko",
   "license": "MIT",
-  "devDependencies": {
-    "postcss-less": "^6.0.0",
-    "postcss-scss": "^4.0.9",
-    "postcss-styled-syntax": "^0.7.0",
-    "stylelint": "^16.12.0",
-    "stylelint-less": "^3.0.1",
-    "stylelint-order": "^6.0.4",
-    "stylelint-plugin-logical-css": "^1.2.1",
-    "stylelint-scss": "^6.10.0",
-    "typescript": "^5.7.2",
-    "webpack": "^5.97.1"
+  "dependencies": {
+    "postcss-styled-syntax": "0.7.0",
+    "postcss-syntax": "0.36.2",
+    "stylelint": "16.12.0",
+    "stylelint-config-standard": "36.0.1",
+    "stylelint-config-standard-less": "3.0.1",
+    "stylelint-config-standard-scss": "14.0.0",
+    "stylelint-order": "6.0.4",
+    "stylelint-plugin-logical-css": "1.2.1",
+    "stylelint-webpack-plugin": "5.0.1"
   },
-  "files": ["lib"]
+  "files": [
+    "stylelint.config.mjs"
+  ]
 }
